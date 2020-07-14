@@ -5,7 +5,7 @@
 # silakan di resubmit dengan nilai variable priority yang lebih besar dari
 # nilai priority submisi sebelumnya
 # JIKA TIDAK ADA VARIABLE priority DIANGGAP priority=0
-priority = 0
+priority = 2
 
 #netacad email cth: 'abcd@gmail.com'
 email='muhammad.adipurna.k@mail.ugm.ac.id'
@@ -72,10 +72,11 @@ def LLNPiMC(nsim,nsample):
   return estpi
 
 # Graded
+
+import math
 def relativeError(act,est):
   
   # MULAI KODEMU DI SINI
   pass
-  diff = abs(math.pi - estpi)
-  E = diff/math.pi * 100
-  return E    
+  E = abs((est-act)/act * 100)
+  return E
